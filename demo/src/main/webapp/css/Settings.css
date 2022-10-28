@@ -1,0 +1,9 @@
+button[type='button']{
+    background: #326690;
+    border: none;
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}

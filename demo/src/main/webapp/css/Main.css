@@ -1,0 +1,53 @@
+/*body, html {
+    background: #EEF8FF;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+}
+
+.Menu {
+    background: white;
+    width: 70%;
+    margin: 0 auto;
+    height: 45px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid lightgrey;
+}
+
+.tMenu {
+    margin: auto;
+}
+
+.r1 {
+    width: 10%;
+    padding-left: 5%;
+    padding-top: 10px;
+}*/
+
+body, html {
+    background: white;
+    font-size: 13px;
+    font-family: 'Roboto', sans-serif;
+    margin-top: 0;
+}
+
+.Menu {
+    background: #326690;
+    width: 70%;
+    margin: 0 auto;
+    height: 45px;
+    border-radius: 0 0 10px 10px;
+    border: 1px solid lightgrey;
+}
+
+
+.tMenu {
+    margin: auto;
+}
+
+.r1 {
+    width: 10%;
+    padding-left: 5%;
+    padding-top: 10px;
+}
+

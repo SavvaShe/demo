@@ -1,0 +1,82 @@
+button[type='button']{
+    background: #326690;
+    border: none;
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+
+.tСardView{
+    background: white;
+    border: 1px solid lightgrey;
+    margin: 30px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    border-collapse: collapse;
+}
+
+.cardView {
+
+}
+
+.c1, .c2, .c3 {
+    height: 40px;
+    width: 50%;
+    border: 0.5px solid lightgrey;
+}
+
+.tm1{
+    height: 40px;
+    border: 0.5px solid lightgrey;
+    width: 25%;
+}
+
+.tCardMenu {
+    background: white;
+    border: 1px solid lightgrey;
+    margin: 1px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    border-collapse: collapse;
+}
+
+input[type='datetime-local']{
+    background: transparent;
+    border: none;
+    padding-left: 45px;
+    color: black;
+}
+.sl1 {
+    background: transparent;
+    border: none;
+    width: 20%;
+    color: black;
+    text-align: left;
+}
+
+.sl2 {
+    background: transparent;
+    border: none;
+    width: 35%;
+    color: black;
+    text-align: left;
+}
+

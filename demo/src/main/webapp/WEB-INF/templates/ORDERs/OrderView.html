@@ -1,0 +1,465 @@
+<!--
+    Страница просмотра наряда на передачу ПО
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Наряд</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/OrderView.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/Main.css"/>
+
+</head>
+<body>
+<div class="Menu">
+    <table class="tMenu">
+        <tbody>
+        <tr class="tr1">
+            <td class="r1">
+                <button type="button" onclick="window.open('../ORDERs/OrderList.html')" id="ORDERS_LIST">
+                    Наряды
+                </button>
+                <!--<input type="submit" value="Наряды" id="ORDERS_LIST" onclick="window.open('../ORDERs/OrderList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')">
+                    Карты передачи
+                </button>
+                <!--<input type="submit" value="Карты передачи" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')">
+                    Доска
+                </button>
+                <!--<input type="submit" value="Доска" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')">
+                    Настройки
+                </button>
+                <!--<input type="submit" value="Настройки" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SERVICES" onclick="window.open('../SERVICEs/Services.html')">
+                    Сервисы
+                </button>
+                <!--<input type="submit" value="Сервисы" id="SERVICES" onclick="window.open('../SERVISEs/Services.html')"/>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="orderView">
+    <table class="tOrderView">
+        <tbody>
+        <tr>
+            <td class="h2" colspan="4">
+                Наряд №
+            </td>
+        </tr>
+        <tr>
+            <td class="h1" colspan="4">
+                Подсистема
+            </td>
+        </tr>
+        <tr>
+            <td class="h1" colspan="4">
+                База данных и серверная часть
+            </td>
+        </tr>
+        <tr>
+            <td class="h1" colspan="4">
+                Согласование
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="18" class="td1 wr">
+                Заполняется разработчиком
+            </td>
+            <td class="td2">
+                Номер версии изменений
+            </td>
+            <td class="td3">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Основание
+            </td>
+            <td class="td3">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Условия для выполнения наряда
+            </td>
+            <td class="td3">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Содержание изменений
+            </td>
+            <td class="td3">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Изменение в документации
+            </td>
+            <td class="td3">
+
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Источник данных для обновления ПО
+            </td>
+            <td colspan="3" class="td3">
+                Тестовый полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td3">
+                Промышленный полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Процедура установки
+            </td>
+            <td colspan="3" class="td3">
+                Тестовый полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td3">
+                Промышленный полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Методика проверки работоспособности системы
+            </td>
+            <td colspan="3" class="td3">
+                Тестовый полигон:
+                <br>
+                Функциональное (по содержанию изменений) и нагрузочное тестирование
+            </td>
+        </tr>
+        <tr>
+            <td class="td3">
+                Промышленный полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Методика проверки внесенных изменений (функционала)
+            </td>
+            <td colspan="3" class="td3">
+                Тестовый полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td3">
+                Промышленный полигон:
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Технология отката
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Контактные данные ответственного разработчика
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Время простоя системы
+            </td>
+            <td class="td4">
+                Остановка системы
+            </td>
+            <td colspan="2" class="td5">
+                Время простоя
+            </td>
+        </tr>
+        <tr>
+            <td class="td4">
+
+            </td>
+            <td colspan="2" class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="td5">
+                ОТВЕТСТВЕННЫЕ ОТ ОРГАНИЗАЦИИ - РАЗРАБОТЧИКА за проведение тестирования на полигоне
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Программист
+            </td>
+            <td>
+
+            </td>
+            <td colspan="2" class="td5">
+
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Технолог
+            </td>
+            <td class="td5">
+
+            </td>
+            <td colspan="2" class="td5">
+
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Администратор
+            </td>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+
+                <br>
+
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="5" class="td5">
+                ОТВЕТСТВЕННЫЙ ОТ ФУНКЦИОНАЛЬНОГО ЗАКАЗЧИКА
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+
+            </td>
+            <td class="td5">
+
+            </td>
+            <td colspan="2">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="td5">
+                ЗАЯВКА НА ТЕСТИРОВАНИЕ
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Контактное лицо заказчика для проведения тестирования
+            </td>
+            <td class="td5">
+
+            </td>
+            <td colspan="2" class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" class="td5">
+                Дата передачи ПО на тестирование
+            </td>
+            <td class="td5">
+                Дата
+            </td>
+            <td class="td5">
+                Время
+            </td>
+        </tr>
+        <tr>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" class="td5">
+                Дата и время установки на тестовый полигон
+            </td>
+            <td class="td5">
+                Дата
+            </td>
+            <td class="td5">
+                Время
+            </td>
+        </tr>
+        <tr>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Контактное лицо заказчика для проведения тестирования
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Источник данных для тестового полигона
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Период тестирования
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Результаты тестирования. Принятое решение
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Ответственный за проведение функционального тестирования
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Ответственный от ЦТС за проведение тестирования
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="td5">
+                ПЕРЕНОС НА ПРОМЫШЛЕННЫЙ ПОЛИГОН
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Источник данных для производственного полигона
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" class="td5">
+                Планируемые даты и время установки на промышленный полигон
+            </td>
+            <td class="td5">
+                Дата
+            </td>
+            <td class="td5">
+                Время
+            </td>
+        </tr>
+        <tr>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Представитель функционального заказчика
+            </td>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="torderMenu">
+        <tr>
+            <td class="tm1">
+                <input type="submit" value="Корректировать" />
+            </td>
+            <td class="tm1">
+                <input type="submit" value="Создать по образу" />
+            </td>
+            <td class="tm1">
+                <input type="submit" value="Распечатать" />
+            </td>
+        </tr>
+    </table>
+    <table class="exOrderMenu">
+        <tr>
+            <td rowspan="3" class="tm1">
+                <label>
+                Карта передачи ПО
+                <br>
+                    <input id="H_CARD_PO">
+                </label>
+            </td>
+            <td class="tm1">
+                Статус
+            </td>
+            <td class="tm1">
+
+            </td>
+        </tr>
+        <tr>
+            <td class="tm1">
+                Исполнитель
+            </td>
+            <td class="tm1">
+
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+</html>

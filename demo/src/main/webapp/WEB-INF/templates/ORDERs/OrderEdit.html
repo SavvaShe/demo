@@ -1,0 +1,608 @@
+<!--
+    Страница просмотра наряда на передачу ПО
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Наряд</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/OrderView.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/Main.css"/>
+
+</head>
+<body>
+<div class="Menu">
+    <table class="tMenu">
+        <tbody>
+        <tr class="tr1">
+            <td class="r1">
+                <button type="button" onclick="window.open('../ORDERs/OrderList.html')" id="ORDERS_LIST">
+                    Наряды
+                </button>
+                <!--<input type="submit" value="Наряды" id="ORDERS_LIST" onclick="window.open('../ORDERs/OrderList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')">
+                    Карты передачи
+                </button>
+                <!--<input type="submit" value="Карты передачи" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')">
+                    Доска
+                </button>
+                <!--<input type="submit" value="Доска" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')">
+                    Настройки
+                </button>
+                <!--<input type="submit" value="Настройки" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SERVICES" onclick="window.open('../SERVICEs/Services.html')">
+                    Сервисы
+                </button>
+                <!--<input type="submit" value="Сервисы" id="SERVICES" onclick="window.open('../SERVISEs/Services.html')"/>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="orderView">
+    <table class="tOrderView">
+        <tbody>
+        <tr>
+            <td class="h2" colspan="4">
+                Номер будет присвоен автоматически после сохранения наряда
+            </td>
+        </tr>
+        <tr>
+            <td class="h1" colspan="4">
+                <label>
+                    <select>
+                        <option disabled>
+                            Подсистема
+                        </option>
+                        <option>
+                            ЕМД-ПП
+                        </option>
+                        <option>
+                            РРД-ГП
+                        </option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="h1" colspan="4">
+                <label>
+                    <input type="text" ID="H_GHANGE_OBJECT" title="Объект внесения изменений (БД, серверная часть, форма и др.)">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="h1" colspan="4">
+                <label>
+                    <select id="H_FC_ADREEMENT">
+                        <option>
+                            Согласование не требуется
+                        </option>
+                        <option>
+                            Требуется согласование с ФЗ
+                        </option>
+                    </select>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="18" class="td1 wr">
+                Заполняется разработчиком
+            </td>
+            <td class="td2">
+                Номер версии изменений
+            </td>
+            <td class="td3" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="64" id="H_VERSION">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Основание
+            </td>
+            <td class="td3" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" autocomplete="off" id="H_REASON">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2" >
+                Условия для выполнения наряда
+            </td>
+            <td class="td3" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" id="H_CONDITIONS">
+                </label>
+            </td>
+        </tr>
+<!--        <tr>-->
+<!--            <td class="td2">-->
+
+<!--            </td>-->
+<!--        </tr>-->
+        <tr>
+            <td class="td2">
+                Содержание изменений
+            </td>
+            <td class="td3" colspan="2">
+                <label>
+                    <textarea cols="83" rows="17" id="H_CHANGES"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Изменение в документации
+            </td>
+            <td class="td3" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" id="H_DOC_CHENGE">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Источник данных для обновления ПО
+            </td>
+            <td class="td3" colspan="2">
+                Тестовый полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_D_SRC_TEST"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td3" colspan="2">
+                Промышленный полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_D_SRC_PROD"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Процедура установки
+            </td>
+            <td class="td3" colspan="2">
+                Тестовый полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_INSTALL_TEST"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td3" colspan="2">
+                Промышленный полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_INSTALL_PROD"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Методика проверки работоспособности системы
+            </td>
+            <td class="td3" colspan="2">
+                Тестовый полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_METHOD_TEST"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td3" colspan="2">
+                Промышленный полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_METHOD_PROD"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Методика проверки внесенных изменений (функционала)
+            </td>
+            <td class="td3" colspan="2">
+                Тестовый полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_METHOD_TEST_F"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td3" colspan="2">
+                Промышленный полигон:
+                <br>
+                <label>
+                    <textarea cols="83" rows="5" id="H_METHOD_PROD_F"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Технология отката
+            </td>
+            <td class="td2" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" id="H_ROLLBACK">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="td2">
+                Контактные данные ответственного разработчика
+            </td>
+            <td class="td2" colspan="2">
+                <label>
+                    <textarea cols="83" rows="4" id="H_CONTACT"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td rowspan="2" class="td2">
+                Время простоя системы
+            </td>
+            <td class="td4">
+                Остановка системы
+            </td>
+            <td colspan="2" class="td5">
+                Время простоя
+            </td>
+        </tr>
+        <tr>
+            <td class="td4">
+                <label>
+                    <select id="H_STOP_SYSTEM">
+                        <option value="1">
+                            Да
+                        </option>
+                        <option value="2">
+                            Нет
+                        </option>
+                    </select>
+                </label>
+            </td>
+            <td colspan="2" class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_DOWN_TIME">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="td5">
+                ОТВЕТСТВЕННЫЕ ОТ ОРГАНИЗАЦИИ - РАЗРАБОТЧИКА за проведение тестирования на полигоне
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Программист
+            </td>
+            <td>
+
+            </td>
+            <td colspan="2" class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_PROGRAMMER">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_PROGRAMMER_PH">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Технолог
+            </td>
+            <td class="td5">
+
+            </td>
+            <td colspan="2" class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_TECHNOLOG">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_TECHNOLOG_PH">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Администратор
+            </td>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_ADMIN">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_ADMIN_PH">
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <td colspan="5" class="td5">
+                ОТВЕТСТВЕННЫЙ ОТ ФУНКЦИОНАЛЬНОГО ЗАКАЗЧИКА
+                <br>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_FZ_FTEST_POST">
+                </label>
+            </td>
+            <td class="td5">
+
+            </td>
+            <td colspan="2">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_FZ_FTEST">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_FZ_FTEST_PH">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="5" class="td5">
+                ЗАЯВКА НА ТЕСТИРОВАНИЕ
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Контактное лицо заказчика для проведения тестирования
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_ZAK_TEST">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_ZAK_TEST_POST">
+                </label>
+            </td>
+            <td colspan="2" class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_ZAK_TEST_PH">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" class="td5">
+                Дата передачи ПО на тестирование
+            </td>
+            <td class="td5">
+                Дата
+            </td>
+            <td class="td5">
+                Время
+            </td>
+        </tr>
+        <tr>
+            <td class="td5">
+                <label>
+                    <input type="date" id="H_TEST_SEND_DATE">
+                </label>
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="time" id="H_TEST_SEND_TIME">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" class="td5">
+                Дата и время установки на тестовый полигон
+            </td>
+            <td class="td5">
+                Дата
+            </td>
+            <td class="td5">
+                Время
+            </td>
+        </tr>
+        <tr>
+            <td class="td5">
+                <label>
+                    <input type="date" id="H_TEST_INST_DATE">
+                </label>
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="time" id="H_TEST_INST_TIME">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Дата окончания тестирования
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="date" id="H_TEST_END_DATE">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Источник данных для тестового полигона
+            </td>
+            <td class="td5" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" id="H_TEST_DATASOURCE">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Период тестирования
+            </td>
+            <td class="td5" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" id="H_TEST_STOP_DATE">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Причины нарушения перриода тестирования
+            </td>
+            <td class="td5" colspan="2">
+                <label>
+                    <input type="text" size="90" maxlength="256" id="H_TEST_STOP_VIOLATION">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Результаты тестирования. Принятое решение
+            </td>
+            <td class="td5" colspan="2">
+                <label>
+                    <textarea cols="83" rows="10" id="H_TEST_RESULT"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Ответственный за проведение функционального тестирования
+            </td>
+            <td class="td5">
+                № Проекта
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="14" id="H_PRJ_NUMBER">
+                </label>
+            </td>
+            <td class="td5">
+                <label>
+                    <select id="H_TESTERS_AC">
+                        <option disabled>
+                            Ответственный за тестирование
+                        </option>
+                    </select>
+                </label>
+                <br>
+                <label>
+                    <textarea cols="38" rows="6" id="H_TESTERS"></textarea>
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Ответственный от ЦТС за проведение тестирования
+            </td>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_OTV_CTS_TEST">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_OTV_CTS_TEST_PH">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4" class="td5">
+                ПЕРЕНОС НА ПРОМЫШЛЕННЫЙ ПОЛИГОН
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Источник данных для производственного полигона
+            </td>
+            <td class="td5" colspan="2">
+                <label>
+                    <input type="text" size="40" maxlength="256" id="H_PROD_DATASOURCE">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" rowspan="2" class="td5">
+                Планируемые даты и время установки на промышленный полигон
+            </td>
+            <td class="td5">
+                Дата
+            </td>
+            <td class="td5">
+                Время
+            </td>
+        </tr>
+        <tr>
+            <td class="td5">
+                <label>
+                    <input type="date" id="H_PROD_INST_DATE">
+                </label>
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="time" id="H_PROD_INST_TIME">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="td5">
+                Представитель функционального заказчика
+            </td>
+            <td class="td5">
+
+            </td>
+            <td class="td5">
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_F_CUSTOMER">
+                </label>
+                <br>
+                <label>
+                    <input type="text" size="40" maxlength="64" id="H_F_CUSTOMER_PH">
+                </label>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+
+    <table class="tOrderMenu">
+        <tr>
+            <td class="tm1">
+                <input type="submit" value="Корректировать" />
+            </td>
+            <td class="tm1">
+                <input type="submit" value="Создать по образу" />
+            </td>
+            <td class="tm1">
+                <input type="submit" value="Распечатать" />
+            </td>
+        </tr>
+    </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,159 @@
+/*Дополнительные стили меню*/
+button[type='button']{
+    background: #326690;
+    border: none;
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input[type="submit"] {
+    background: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input[type="text"] {
+    background: white;
+    border: 0.5px solid lightgrey;
+    color: black;
+    text-align: left;
+    padding-left: 5px;
+    cursor: pointer;
+    margin-bottom: 2px;
+}
+
+input[type="date"] {
+    background: white;
+    border: 0.5px solid lightgrey;
+    color: black;
+    text-align: center;
+    cursor: pointer;
+    padding-left: 5px;
+}
+
+.c1, .c2, .c3 {
+    height: 40px;
+    width: 50%;
+    border: 0.5px solid lightgrey;
+}
+
+.tm1{
+    height: 40px;
+    border: 0.5px solid lightgrey;
+    width: 25%;
+}
+
+.tOrderMenu {
+    background: white;
+    border: 1px solid lightgrey;
+    margin: 1px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-collapse: collapse;
+}
+
+input[type='datetime-local']{
+    background: transparent;
+    border: none;
+    padding-left: 45px;
+    color: black;
+}
+.sl1 {
+    background: transparent;
+    border: none;
+    width: 20%;
+    color: black;
+    text-align: left;
+}
+
+.sl2 {
+    background: transparent;
+    border: none;
+    width: 35%;
+    color: black;
+    text-align: left;
+}
+
+.tNewOrder{
+    font-size:20px;
+    padding-top:20px;
+    border: 0.5px solid white;
+}
+
+.tExportExcel{
+    font-size:20px;
+    padding-top:25px;
+    border: 0.5px solid white;
+}
+
+.none{
+    border: 0.5px solid white;
+}
+
+.filtOrder{
+
+}
+.tFiltOrder{
+    background: white;
+    border: 0.5px solid lightgrey;
+    margin: 30px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-collapse: collapse;
+}
+.fil{
+    border-collapse: collapse;
+    border: 0.5px solid lightgrey;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}
+
+.orderList{
+
+}
+
+.tOrderList{
+    background: white;
+    border: 0.5px solid lightgrey;
+    margin: 30px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-collapse: collapse;
+}
+
+.tOrderListFilt{
+
+}
+
+.fil1{
+    border-collapse: collapse;
+    border: 0.5px solid #326690;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    width: 10%;
+    font-size: 12px;
+    background:#326690;
+    color:white;
+}
+
+.fil2{
+    border-collapse: collapse;
+    border: 0.5px solid lightgrey;
+    text-align: center;
+    padding: 5px 0 5px 0;
+}

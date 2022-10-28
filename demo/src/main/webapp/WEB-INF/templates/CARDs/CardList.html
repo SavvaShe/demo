@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Карты</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/CardList.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/Main.css"/>
+</head>
+<body onload = "init()">
+<div class="Menu">
+    <table class="tMenu">
+        <tbody>
+        <tr class="tr1">
+            <td class="r1">
+                <button type="button" onclick="window.open('../ORDERs/OrderList.html')" id="ORDERS_LIST">
+                    Наряды
+                </button>
+                <!--<input type="submit" value="Наряды" id="ORDERS_LIST" onclick="window.open('../ORDERs/OrderList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')">
+                    Карты передачи
+                </button>
+                <!--<input type="submit" value="Карты передачи" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')">
+                    Доска
+                </button>
+                <!--<input type="submit" value="Доска" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')">
+                    Настройки
+                </button>
+                <!--<input type="submit" value="Настройки" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SERVICES" onclick="window.open('../SERVISEs/Services.html')">
+                    Сервисы
+                </button>
+                <!--<input type="submit" value="Сервисы" id="SERVICES" onclick="window.open('../SERVISEs/Services.html')"/>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="filtCard">
+    <table class="tFiltCard">
+        <tbody>
+        <tr>
+            <td class="fil">
+                ID карты
+            </td>
+            <td class="fil">
+                <label for="C_ID">
+                    <input type="text" id="C_ID">
+                </label>
+            </td>
+
+            <td class="fil">
+                Дата корректировки
+            </td>
+            <td class="fil">
+                <label for="C_DATE_KORR">
+                    <input type="date" id="C_DATE_KORR">
+                </label>
+            </td>
+            <td class="fil">
+                Статус
+            </td>
+            <td class="fil">
+                <label for="C_STATUS">
+                    <input type="text" id="C_STATUS">
+                </label>
+            </td>
+
+        </tr>
+        <tr>
+            <td class="fil" >
+                Номер карты
+            </td>
+            <td class="fil">
+                <label for="C_NUM_CARD">
+                    <input type="text" id="C_NUM_CARD">
+                </label>
+            </td>
+
+            <td class="fil">
+                Дата создания
+            </td>
+            <td class="fil">
+                <label for="C_DATE_CREATE">
+                    <input type="date" id="C_DATE_CREATE">
+                </label>
+            </td>
+            <td class="fil">
+                Ответственный
+            </td>
+            <td class="fil">
+                <label for="C_OTV">
+                    <input type="text" id="C_OTV">
+                </label>
+            </td>
+        </tr>
+        <tr>
+            <td class="tNewCard">
+                <input type="submit" value="Создать" onclick="window.open('../ORDERs/OrderEdit.html')">
+            </td>
+            <td class="tExportExcel">
+                <input type="submit" value="Экспорт в Excel" onclick=window.open('')">
+            </td>
+            <td class="none"></td>
+            <td class="none"></td>
+            <td class="none"></td>
+            <td class="none"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="cardList">
+    <table class="tCardList"  id="maintab">
+        <thead>
+        <tr class="tCardListFilt">
+            <td class="fil1">
+                id карты
+            </td>
+            <td class="fil2">
+                Номер карты
+            </td>
+            <td class="fil3">
+                Статус
+            </td>
+            <td class="fil4">
+                Ответственный
+            </td>
+            <td class="fil5">
+                Дата корректировки
+            </td>
+            <td class="fil6">
+                Дата создания
+            </td>
+            <td class="fil7">
+                Номер письма
+            </td>
+            <td class="fil8">
+                Подсистема
+            </td>
+        </tr>
+        </thead>
+        <tbody class="mdata">
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

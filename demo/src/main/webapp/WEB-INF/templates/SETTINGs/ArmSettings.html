@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Настройки АРМа</title>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/Main.css"/>
+    <link rel="stylesheet" type="text/css" media="all" href="../../../css/ArmSettings.css"/>
+</head>
+<body>
+<div class="Menu">
+    <table class="tMenu">
+        <tbody>
+        <tr class="tr1">
+            <td class="r1">
+                <button type="button" onclick="window.open('../ORDERs/OrderList.html')" id="ORDERS_LIST">
+                    Наряды
+                </button>
+                <!--<input type="submit" value="Наряды" id="ORDERS_LIST" onclick="window.open('../ORDERs/OrderList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')">
+                    Карты передачи
+                </button>
+                <!--<input type="submit" value="Карты передачи" id="CARD_LIST" onclick="window.open('../CARDs/CardList.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')">
+                    Доска
+                </button>
+                <!--<input type="submit" value="Доска" id="DASHBOARD" onclick="window.open('../SERVICEs/Dashboard.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')">
+                    Настройки
+                </button>
+                <!--<input type="submit" value="Настройки" id="SETTINGS" onclick="window.open('../SETTINGs/Settings.html')"/>-->
+            </td>
+            <td class="r1">
+                <button type="button" id="SERVICES" onclick="window.open('../SERVICEs/Services.html')">
+                    Сервисы
+                </button>
+                <!--<input type="submit" value="Сервисы" id="SERVICES" onclick="window.open('../SERVISEs/Services.html')"/>-->
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<div class="setMenu">
+    <table class="tSetMenu">
+        <tbody>
+        <tr>
+            <td class="tm1">
+                <input type="submit" value="Пользователи" id="SET_USERS"/>
+            </td>
+            <td class="tm1">
+                <input type="submit" value="Группы" id="SET_GROUP"/>
+            </td>
+            <td class="tm1">
+                <input type="submit" value="Настройки доступа" id="SET_ACCESS"/>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<div class="usersList" id="USER_LIST">
+    <table class="tUsersList">
+        <tbody>
+        <tr class="tUsersListFilt">
+            <td class="fil1">
+                id Пользователя
+            </td>
+            <td class="fil1">
+                Фамилия
+            </td>
+            <td class="fil1">
+                Имя
+            </td>
+            <td class="fil1">
+                Отдел
+            </td>
+            <td class="fil1">
+                Дата приема
+            </td>
+            <td class="fil1">
+                Дата увольнения
+            </td>
+            <td class="fil1">
+                Телефон
+            </td>
+            <td class="fil1">
+                Почта
+            </td>
+            <td class="fil1">
+                Роль
+            </td>
+        </tr>
+        <tr>
+            <td class="fil3" id="ID_USER">
+
+            </td>
+            <td class="fil3" id="USER_LAST_NAME">
+
+            </td>
+            <td class="fil3" id="USER_FIRST_NAME">
+
+            </td>
+            <td class="fil3" id="DEPARTMENT">
+
+            </td>
+            <td class="fil3" id="EPLOYMENT_DATE">
+
+            </td>
+            <td class="fil3" id="DISMISSAL_DATE">
+
+            </td>
+            <td class="fil3" id="USER_PHONE">
+
+            </td>
+            <td class="fil3" id="USER_EMAIL">
+
+            </td>
+            <td class="fil3" id="USER_ROLE">
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+<div class="groupSet" id="GROUP_SET">
+    <table class="tGroupSet">
+        <tbody>
+        <tr>
+            <td class="fil1">
+                Группа
+            </td>
+            <td class="fil1">
+                Пользователи
+            </td>
+        </tr>
+        <tr>
+            <td class="groupName">
+
+            </td>
+            <td class="userName">
+
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+</body>
+</html>

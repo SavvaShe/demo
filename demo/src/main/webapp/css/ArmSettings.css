@@ -1,0 +1,77 @@
+input[type="submit"] {
+    background: white;
+    border: none;
+    color: black;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button[type='button']{
+    background: #326690;
+    border: none;
+    color: white;
+    font-weight:bold;
+    text-align: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.setMenu{
+    margin-top: 20px;
+}
+
+.tSetMenu{
+    background: white;
+    border: 1px solid lightgrey;
+    margin: 1px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    border-collapse: collapse;
+}
+
+.tm1{
+    height: 40px;
+    border: 0.5px solid lightgrey;
+    width: 20%;
+}
+
+.tUsersList{
+    background: white;
+    border: 0.5px solid lightgrey;
+    margin: 30px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-collapse: collapse;
+}
+
+.tGroupSet{
+    background: white;
+    border: 0.5px solid lightgrey;
+    margin: 30px auto;
+    width:70%;
+    height: 100%;
+    align-content: center;
+    text-align: center;
+    padding: 20px 0 20px 0;
+    border-collapse: collapse;
+}
+
+
+
+.fil1{
+    border-collapse: collapse;
+    border: 0.5px solid #326690;
+    text-align: center;
+    padding: 5px 0 5px 0;
+    width: 10%;
+    font-size: 12px;
+    background:#326690;
+    color:white;
+}
